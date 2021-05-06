@@ -123,10 +123,10 @@ public class Characteristics : MonoBehaviour
 
         if (punch.type == blockType)
         {
-            animat.Play($"Base Layer.Center Block");
-
             if (block >= punch.damage)
             {
+                animat.Play($"Base Layer.Center Block");
+                
                 block -= punch.damage;
                 blockTaken += punch.damage;
 
@@ -134,6 +134,15 @@ public class Characteristics : MonoBehaviour
             }
             else
             {
+                if (punch.type == PunchType.Lower)
+                {
+                    animat.Play($"Base Layer.Hit To Body");
+                }
+                else
+                {
+                    animat.Play($"Base Layer.Head Hit");
+                }
+                
                 if (health - punch.damage * EvaluatedStamina + block >= 0)
                 {
                     health -= punch.damage * EvaluatedStamina - block;

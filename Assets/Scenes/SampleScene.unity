@@ -1168,7 +1168,7 @@ MonoBehaviour:
   pauseCooldown: 60
   spawn1: {fileID: 519749444}
   spawn2: {fileID: 79407610}
-  first: {fileID: 1293704756}
+  first: {fileID: 1928911206}
   second: {fileID: 1427587142}
 --- !u!1 &476676789 stripped
 GameObject:
